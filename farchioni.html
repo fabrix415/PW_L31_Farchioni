@@ -9,24 +9,64 @@
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    <!-- Intestazione principale della pagina-->
-    <header role="banner">
-        <nav role="navigation" aria-label="Menu principale">
-            <h1>Farchioni, Sostenibilità Italiana della Filiera Agricola</h1>
-        </nav>
+    <!-- Intestazione fissa della pagina-->
+   <header class="navbar">
+        <div class="nav-container">
+            <!-- Logo aziendale per jump a home con testo alternativo per accessibilità -->
+            <div class="logo">
+                <a href="#top" aria-label="Torna in cima">
+                    <img src="assets/images/logo_farchioni.png" alt="Logo Farchioni"> 
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="#filiera">Filiera & Territorio</a>
+                <a href="#energia">Efficienza Energetica</a>
+                <a href="#successi">Successi Aziendali</a>
+                <a href="#download" class="btn-download">Scarica Report</a>
+            </nav>
+        </div>
     </header>
     <!-- Contenuto principale della pagina -->
-    <main role="main">
-        <section id="hero">
-            <h2>Coltivazione Sostenibile e Trasparenza Digitale</h2>
-            <p>Un impegno concreto per la tutela delle risorse idriche, la riduzione dell'impronta di carbonio e l'agricoltura di precisione.</p>
-            
-            <!-- Pulsante download -->
-            <a href="assets/pdf/FARCHIONI_BDS2023_DISPLAY_IT.pdf" class="btn-download" aria-label="Scarica il report di sostenibilità aziendale in formato PDF" download>
-                Scarica il Report di Sostenibilità (PDF)
-            </a>
-        </section>
-    </main>
+    <section id="top" class="top-section">
+        <h1>Report di Sostenibilità 2024</h1>
+        <p>L'impegno sostenibile della famiglia Farchioni per la tutela del territorio e dell'ambiente.</p>
+        <!-- Call to action per il salto diretto alla sezione download -->
+        <a href="#download" class="cta-button">Vai al Download Diretto</a>
+    </section>
+
+    <!-- Sezioni informative in scorrimento continuo -->
+    <section id="filiera" class="content-section">
+        <h2>Filiera Agricola e Tutela del Territorio</h2>
+        <p>Tracciabilità delle materie prime, salvaguardia della biodiversità nelle tenute e coltivazione sostenibile.</p>
+    </section>
+
+    <section id="energia" class="content-section alt-bg">
+        <h2>Efficienza Energetica ed Ecologica</h2>
+        <p>Dati sul risparmio idrico nei campi e impiego di fonti energetiche rinnovabili nei processi produttivi.</p>
+    </section>
+
+    <section id="successi" class="content-section">
+        <h2>Successi Aziendali</h2>
+        <p>Storia dell'azienda, evoluzione del brand, obiettivi futuri e riconoscimenti ottenuti.</p>
+    </section>
+
+    <!-- Sezione dedicata al Download del Report -->
+    <section id="download" class="download-section">
+        <h2>Download Report di Sostenibilità</h2>
+        <p>Consulta e scarica i documenti ufficiali messi a disposizione dall'azienda.</p>
+        <div class="card-container">
+            <div class="card">
+                <h3>Report 2024</h3>
+                <p>Edizione aggiornata - PDF</p>
+                <a href="assets/pdf/FARCHIONI_BILANCIO_BDS2024_ITA_280126.pdf" class="btn-card" download>Scarica PDF 2024</a>
+            </div>
+            <div class="card">
+                <h3>Report 2023</h3>
+                <p>Edizione precedente - PDF</p>
+                <a href="assets/pdf/FARCHIONI_BDS2023_DISPLAY_IT.pdf" class="btn-card alt" download>Scarica PDF 2023</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Piè di pagina copyright -->
     <footer role="contentinfo">
