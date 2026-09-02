@@ -1,0 +1,57 @@
+/* Stili generali */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #1b4d3e; /* Verde sustainability */
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Pulsante download */
+.btn-download {
+    display: inline-block;
+    background-color: #2e7d32;
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: underline;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.btn-download:hover {
+    background-color: #1b5e20;
+}
+
+/* Accessibilità: Focus evidente per navigazione da pc */
+a:focus-visible, button:focus-visible {
+    outline: 3px solid #ffcc00;
+    outline-offset: 2px;
+}
+
+/* Classe CSS per elementi leggibili SOLO dagli e-reader */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
