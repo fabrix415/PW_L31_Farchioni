@@ -14,7 +14,7 @@ body {
 .navbar {
     position: sticky;
     top: 0;
-    background-color: #2e6f40; /* Tonalità di verde sostenibile */
+    background-color: #68a87a; /* Tonalità di verde che risalti il logo */
     padding: 15px 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     z-index: 1000;
@@ -43,15 +43,15 @@ html {
 }
 
 .nav-links a {
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     margin-left: 20px;
-    font-size: 0.95rem;
+    font-size: 1.0rem;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #a8e0b6;
+    color: #47a55f;
 }
 
 .btn-download {
@@ -67,14 +67,14 @@ html {
 }
 
 /* Sezioni generiche */
-.hero-section, .content-section, .download-section {
+.top-section, .content-section, .download-section {
     padding: 80px 20px;
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
 }
 
-.hero-section {
+.top-section {
     padding-top: 100px;
 }
 

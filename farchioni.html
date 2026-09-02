@@ -12,7 +12,7 @@
     <!-- Intestazione fissa della pagina-->
    <header class="navbar">
         <div class="nav-container">
-            <!-- Logo aziendale per jump a home con testo alternativo per accessibilità -->
+            <!-- Logo aziendale per jump a top con testo alternativo per accessibilità -->
             <div class="logo">
                 <a href="#top" aria-label="Torna in cima">
                     <img src="assets/images/logo_farchioni.svg" alt="Logo Farchioni"> 
@@ -34,39 +34,126 @@
         <a href="#download" class="cta-button">Vai al Download Diretto</a>
     </section>
 
-    <!-- Sezioni informative in scorrimento continuo -->
-    <section id="filiera" class="content-section">
-        <h2>Filiera Agricola e Tutela del Territorio</h2>
-        <p>Tracciabilità delle materie prime, salvaguardia della biodiversità nelle tenute e coltivazione sostenibile.</p>
-    </section>
+    <!-- Sezioni in scorrimento continuo -->
+    <section id="kpi" class="content-section">
+    <h2>Dati Chiave di Sostenibilità 2024</h2>
+    <p>Principali indicatori ambientali, economici e produttivi estratti dal report aziendale.</p>
 
-    <section id="energia" class="content-section alt-bg">
-        <h2>Efficienza Energetica ed Ecologica</h2>
-        <p>Dati sul risparmio idrico nei campi e impiego di fonti energetiche rinnovabili nei processi produttivi.</p>
-    </section>
-
-    <section id="successi" class="content-section">
-        <h2>Successi Aziendali</h2>
-        <p>Storia dell'azienda, evoluzione del brand, obiettivi futuri e riconoscimenti ottenuti.</p>
-    </section>
-
-    <!-- Sezione dedicata al Download del Report -->
-    <section id="download" class="download-section">
-        <h2>Download Report di Sostenibilità</h2>
-        <p>Consulta e scarica i documenti ufficiali messi a disposizione dall'azienda.</p>
-        <div class="card-container">
-            <div class="card">
-                <h3>Report 2024</h3>
-                <p>Edizione aggiornata - PDF</p>
-                <a href="assets/pdf/FARCHIONI_BILANCIO_BDS2024_ITA_280126.pdf" class="btn-card" download>Scarica PDF 2024</a>
-            </div>
-            <div class="card">
-                <h3>Report 2023</h3>
-                <p>Edizione precedente - PDF</p>
-                <a href="assets/pdf/FARCHIONI_BDS2023_DISPLAY_IT.pdf" class="btn-card alt" download>Scarica PDF 2023</a>
-            </div>
+    <!-- KPI -->
+    <div class="kpi-grid">
+        <div class="kpi-card">
+            <span class="kpi-number">171,3 M€</span>
+            <p class="kpi-label">Ricavi Netti</p>
         </div>
-    </section>
+        <div class="kpi-card">
+            <span class="kpi-number">-20%</span>
+            <p class="kpi-label">Intensità Emissiva (Scope 1+2)</p>
+        </div>
+        <div class="kpi-card">
+            <span class="kpi-number">1.013.683</span>
+            <p class="kpi-label">Piante Coltivate (Olivi e Viti)</p>
+        </div>
+        <div class="kpi-card">
+            <span class="kpi-number">50%</span>
+            <p class="kpi-label">Packaging da Materiali Riciclati</p>
+        </div>
+    </div>
+</section>
+<!-- Sezione Grafici e Immagini Interattive -->
+<section id="grafici" class="content-section alt-bg">
+    <h2>Analisi della Filiera e Impatto Ambientale</h2>
+    <p>Passa con il cursore sulle immagini per ingrandire i dettagli dei processi produttivi e dei consumi.</p>
+
+    <div class="gallery-grid">
+        <!-- Scheda Immagine 1 -->
+        <div class="image-card">
+            <div class="img-container">
+                <img src="assets/images/filiera.jpg" alt="Filiera Agricola Farchioni">
+                <div class="overlay">
+                    <span>14.900 Tonnellate di Olio Prodotte</span>
+                </div>
+            </div>
+            <h3>Tracciabilità e Territorio</h3>
+            <p>Gestione sostenibile delle colture e salvaguardia della biodiversità nelle tenute umbre.</p>
+        </div>
+
+        <!-- Scheda Immagine 2 -->
+        <div class="image-card">
+            <div class="img-container">
+                <img src="assets/images/energia.jpg" alt="Efficienza Energetica">
+                <div class="overlay">
+                    <span>-9% Intensità Energetica per Ricavi</span>
+                </div>
+            </div>
+            <h3>Efficienza ed Energia</h3>
+            <p>Riduzione del consumo idrico nei campi e transizione verso fonti rinnovabili nei 6 impianti.</p>
+        </div>
+    </div>
+</section>
+<section id="energia" class="content-section alt-bg">
+    <h2>Efficienza Energetica ed Ecologica</h2>
+    <p>Dati sul risparmio idrico nei campi e impiego di fonti energetiche rinnovabili nei processi produttivi.</p>
+</section>
+
+<section id="successi" class="content-section">
+    <h2>Successi Aziendali</h2>
+    <p>Storia dell'azienda, evoluzione del brand, obiettivi futuri e riconoscimenti ottenuti.</p>
+</section>
+<!-- Sezione Tabella Dati -->
+<section id="tabella-dati" class="content-section">
+    <h2>Sintesi degli Indicatori (FY 2023/2024)</h2>
+    <div class="table-container">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Indicatore</th>
+                    <th>Valore 2024</th>
+                    <th>Variazione vs 2023</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Consumo Totale Energia</td>
+                    <td>6.088 MWh</td>
+                    <td>+8,5%</td>
+                </tr>
+                <tr>
+                    <td>Emissioni Dirette (Scope 1)</td>
+                    <td>332 tCO₂eq</td>
+                    <td>-9,7%</td>
+                </tr>
+                <tr>
+                    <td>Dipendenti a Tempo Indeterminato</td>
+                    <td>98% (46 su 47)</td>
+                    <td>Stabile</td>
+                </tr>
+                <tr>
+                    <td>Infortuni sul Lavoro</td>
+                    <td>0</td>
+                    <td>0%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Sezione dedicata al Download del Report -->
+<section id="download" class="download-section">
+    <h2>Download Report di Sostenibilità</h2>
+    <p>Consulta e scarica i documenti ufficiali messi a disposizione dall'azienda.</p>
+    <div class="card-container">
+        <div class="card">
+            <h3>Report 2024</h3>
+            <p>Edizione aggiornata - PDF</p>
+            <a href="assets/pdf/FARCHIONI_BILANCIO_BDS2024_ITA_280126.pdf" class="btn-card" download>Scarica PDF 2024</a>
+        </div>
+        <div class="card">
+            <h3>Report 2023</h3>
+            <p>Edizione precedente - PDF</p>
+            <a href="assets/pdf/FARCHIONI_BDS2023_DISPLAY_IT.pdf" class="btn-card alt" download>Scarica PDF 2023</a>
+        </div>
+    </div>
+</section>
 
     <!-- Piè di pagina copyright -->
     <footer role="contentinfo">
