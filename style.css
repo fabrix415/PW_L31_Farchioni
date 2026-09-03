@@ -73,12 +73,12 @@ body {
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
-    height: 21px;
+    height: 24px;
     background: transparent;
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: 1001;
+    z-index: 1002;
 }
 
 .hamburger span {
@@ -157,7 +157,7 @@ body {
 /* MediaQuery per dispositivi mobili o screen ridotti minore di 768px */
 @media screen and (max-width: 768px) {
     .hamburger {
-        display: flex;
+        display: flex !important; /* per sovrapposizione */
     }
 
     .nav-links {
@@ -167,30 +167,33 @@ body {
         width: 70%;
         height: 100vh;
         background-color: #68a87a;
+        display: flex !important; /* per sovrapposizione */
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 25px;
         transition: right 0.4s ease;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+        z-index: 1001 /* per sovrapposizione */
     }
 
     .nav-links.active {
-        right: 0;
+        right: 0 !important; /* per sovrapposizione */
     }
 
     .nav-links a {
         margin-left: 0;
         font-size: 1.2rem;
+        color: #ffffff;
     }
 
     .hamburger.active span:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
+        transform: translateY(10px) rotate(45deg);
     }
     .hamburger.active span:nth-child(2) {
         opacity: 0;
     }
     .hamburger.active span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
+        transform: translateY(-11px) rotate(-45deg);
     }
 }
