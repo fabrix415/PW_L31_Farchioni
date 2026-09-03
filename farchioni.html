@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <!-- Impostiamo lingua italiana per facilitare la comprensione del contenuto da parte dei motori di ricerca e degli e-reader -->
-<html lang="it"> 
+<html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farchioni, sostenibilità Italiana. Report e overview</title>
-    <!-- Colleghiamo il file CSS per lo stile della pagina -->
+
+    <!-- file CSS per lo stile della pagina -->
     <link rel="stylesheet" href="style.css"> 
     <!-- implementazione di swiper avanzato per ottimizzazione mobile -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- implementazione di chart.js per i grafici interattivi -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
 <body>
+
     <!-- Intestazione fissa della pagina-->
-    
    <header class="navbar">
         <div class="nav-container">
             <!-- Logo aziendale per jump a top con testo alternativo per accessibilità -->
@@ -21,21 +25,20 @@
                     <img src="assets/images/logo_farchioni.svg" alt="Logo Farchioni"> 
                 </a>
             </div>
-            <!-- Pulsante Hamburger comparsa se minore 768px -->
+            <!-- Pulsante hamburger comparsa se minore 768px -->
             <button class="hamburger" id="hamburger" aria-label="Apri menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <!-- Menu Link con ID dedicato -->
-            
+            <!-- Menu con ID per jump -->            
             <nav class="nav-links" id="nav-links"> <!-- aggiunto id per JScript menu hamburger-->
                 <a href="#filiera"><b>Filiera & Territorio</b></a>
                 <a href="#successi"><b>Successi</b></a>
                 <a href="#storia"><b>Storia</b></a>
                 <a href="#tabella-dati"><b>Dati Chiave</b></a>
-                <a href="#download" class="btn-download">Download Report</a>
+                <a href="#download" class="btn-download">Report</a>
             </nav>
         </div>
     </header>
@@ -249,45 +252,133 @@
         <div class="swiper-button-next"></div>
     </div>
 </section>
-<!-- Sezione Tabella Dati -->
+<!-- recap dati aziendali -->
 <section id="tabella-dati" class="content-section">
-    <h2>Sintesi degli Indicatori (FY 2023/2024)</h2>
+    <h2>Sintesi Avanzata degli Indicatori ESG (FY 2022/23 - FY 2023/24)</h2>
     <div class="table-container">
         <table class="data-table">
             <thead>
                 <tr>
-                    <th>Indicatore</th>
-                    <th>Valore 2024</th>
-                    <th>Variazione vs 2023</th>
+                    <th scope="col"><b>Ambito ESG</b></th>
+                    <th scope="col"><b>Indicatore / KPI</b></th>
+                    <th scope="col"><b>FY 2022/2023</b></th>
+                    <th scope="col"><b>FY 2023/2024</b></th>
+                    <th scope="col"><b>Note / Trend</b></th>
                 </tr>
             </thead>
             <tbody>
+                <!-- ambiente e circolarità -->
                 <tr>
-                    <td>Consumo Totale Energia</td>
+                    <th scope="rowgroup" rowspan="5"><b>Ambiente & Economia Circolare</b></th>
+                    <td>Consumo Energia Elettrica Totale</td>
+                    <td>5.611 MWh</td>
                     <td>6.088 MWh</td>
-                    <td>+8,5%</td>
+                    <td>▲ Aumento legato all'incremento produttivo</td>
                 </tr>
                 <tr>
-                    <td>Emissioni Dirette (Scope 1)</td>
-                    <td>332 tCO₂eq</td>
-                    <td>-9,7%</td>
+                    <td>Emissioni GHG Scope 1 (Dirette)</td>
+                    <td>367,6 tCO₂eq</td>
+                    <td>332,0 tCO₂eq</td>
+                    <td>▼ -9,7% per efficientamento processi</td>
                 </tr>
                 <tr>
-                    <td>Dipendenti a Tempo Indeterminato</td>
-                    <td>98% (46 su 47)</td>
-                    <td>Stabile</td>
+                    <td>Superficie Agricola Gestita</td>
+                    <td>2.283 ha</td>
+                    <td>2.283 ha</td>
+                    <td>Totale ettari filiera agroalimentare</td>
                 </tr>
                 <tr>
-                    <td>Infortuni sul Lavoro</td>
+                    <td>Sottoprodotti e Scarti Recuperati</td>
+                    <td>100% Sanza/Ghiacciolo</td>
+                    <td>100% Recupero</td>
+                    <td>Valorizzati per biogas, mangimi ed energia</td>
+                </tr>
+                <tr>
+                    <td>Materiali da Imballaggio Riciclati/Riciclabili</td>
+                    <td>> 85%</td>
+                    <td>> 90%</td>
+                    <td>▲Utilizzo prevalente di vetro riciclato e PET</td>
+                </tr>
+
+                <!-- sociale e capitale umano -->
+                <tr>
+                    <th scope="rowgroup" rowspan="5"><b>Sociale & Risorse Umane</b></th>
+                    <td>Organico Totale di Filiera</td>
+                    <td>187 dipendenti</td>
+                    <td>187 dipendenti</td>
+                    <td>Capofiliera ed aziende connesse</td>
+                </tr>
+                <tr>
+                    <td>Contratti a Tempo Indeterminato (Capofiliera)</td>
+                    <td>98% (46/47)</td>
+                    <td>98% (46/47)</td>
+                    <td>Elevata stabilità occupazionale</td>
+                </tr>
+                <tr>
+                    <td>Infortuni sul Lavoro Registrati</td>
                     <td>0</td>
-                    <td>0%</td>
+                    <td>0</td>
+                    <td>Zero infortuni sia gravi sia lievi</td>
+                </tr>
+                <tr>
+                    <td>Ore Totali di Formazione Erogate</td>
+                    <td>16.985 ore</td>
+                    <td>~17.200 ore</td>
+                    <td>▲ Focus su sicurezza, ISO e sostenibilità</td>
+                </tr>
+                <tr>
+                    <td>Presenza Femminile in Organico</td>
+                    <td>~32%</td>
+                    <td>~33%</td>
+                    <td>▲ Ripartizione di genere in crescita organica</td>
+                </tr>
+
+                <!-- economia & governance -->
+                <tr>
+                    <th scope="rowgroup" rowspan="4"><b>Economia & Valore Distribuito</b></th>
+                    <td>Fatturato / Valore della Produzione</td>
+                    <td>144,4 Mln €</td>
+                    <td>171,0 Mln €</td>
+                    <td>▲ Incremento 18,75%</td>
+                </tr>
+                <tr>
+                    <td>Fornitori Locali (Regione Umbria)</td>
+                    <td>14% (~20 Mln €)</td>
+                    <td>14% (~20 Mln €)</td>
+                    <td>Impatto economico diretto sul territorio</td>
+                </tr>
+                <tr>
+                    <td>Certificazioni Integrate Attive</td>
+                    <td>6</td>
+                    <td>6</td>
+                    <td>ISO 9001, 14001, 45001, 50001, SA8000, HACCP</td>
+                </tr>
+                <tr>
+                    <td>Investimenti in R&S Sostenibile</td>
+                    <td>N.D.</td>
+                    <td>In crescita</td>
+                    <td>Focalizzati su tracciabilità ed efficientamento</td>
                 </tr>
             </tbody>
+            
         </table>
+        <caption>Tabella di sintesi dei principali indicatori ESG (Environmental, Social, Governance) 
+            per gli anni fiscali 2022/2023 e 2023/2024.</caption>
+            
+    </div>
+</section>
+<!-- grafici interattivi -->
+<section id="sezione-grafici" class="content-section">
+    <h2>Rappresentazione Grafica KPI</h2>
+    <div class="charts-grid">
+        <div class="chart-card">
+            <h3>Confronto Consumi Energetici vs Emissioni</h3>
+            <canvas id="chartEnergiaEmissioni"></canvas>
+        </div>
     </div>
 </section>
 
-<!-- Sezione dedicata al Download del Report -->
+<!-- Download del Report -->
 <section id="download" class="download-section">
     <h2>Download Report di Sostenibilità</h2>
     <p>Consulta e scarica i documenti ufficiali messi a disposizione dall'azienda.</p>
@@ -357,6 +448,85 @@
             prevEl: '.swiper-button-prev',
         },
     });
-</script>     
+</script>
+<!-- script grafici con chartJS-->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 1. Grafico Consumi ed Emissioni (Barre e Linea)
+        const ctxEnergia = document.getElementById('chartEnergiaEmissioni').getContext('2d');
+        new Chart(ctxEnergia, {
+            type: 'bar',
+            data: {
+                labels: ['FY 2022/2023', 'FY 2023/2024'],
+                datasets: [
+                    {
+                        label: 'Consumo Energia (MWh)',
+                        data: [5611, 6088],
+                        backgroundColor: 'rgba(46, 125, 50, 0.7)',
+                        borderColor: 'rgba(46, 125, 50, 1)',
+                        borderWidth: 1,
+                        yAxisID: 'y'
+                    },
+                    {
+                        label: 'Emissioni Scope 1 (tCO₂eq)',
+                        data: [367.6, 332.0],
+                        type: 'line',
+                        borderColor: 'rgba(211, 47, 47, 1)',
+                        backgroundColor: 'rgba(211, 47, 47, 0.2)',
+                        borderWidth: 2,
+                        pointRadius: 5,
+                        yAxisID: 'y1'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        title: { display: true, text: 'Energia (MWh)' }
+                    },
+                    y1: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        grid: { drawOnChartArea: false },
+                        title: { display: true, text: 'Emissioni (tCO₂eq)' }
+                    }
+                }
+            }
+        });
+
+        // 2. Grafico Contratti di Lavoro (Torta)
+        const ctxContratti = document.getElementById('chartContratti').getContext('2d');
+        new Chart(ctxContratti, {
+            type: 'doughnut',
+            data: {
+                labels: ['Tempo Indeterminato (98%)', 'Altre forme contrattuali (2%)'],
+                datasets: [{
+                    data: [98, 2],
+                    backgroundColor: [
+                        'rgba(46, 125, 50, 0.8)',
+                        'rgba(200, 200, 200, 0.8)'
+                    ],
+                    borderColor: [
+                        'rgba(46, 125, 50, 1)',
+                        'rgba(180, 180, 180, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
