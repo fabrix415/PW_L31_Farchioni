@@ -322,29 +322,6 @@ body {
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Ottimizzazione specifica per mobile - incluso la freccia verso il basso per il suggerimento di scorrimento */
-@media (max-width: 768px) {
-    .tooltip-container {
-        cursor: pointer; /* Su mobile mostra che l'elemento è toccabile */
-    }
-
-    .top-section {
-        padding-bottom: 130px; /* Riduce il padding per schermi più piccoli e non sovrappore la freccia di scorrimento */
-    }
-    
-    .scroll-down {
-        bottom: 20px; /* Sposta la freccia di scorrimento più in alto per evitare sovrapposizioni con il tooltip */
-    }
-
-    .scroll-text {
-        font-size: 0.75rem; /* Riduce la dimensione del testo per schermi più piccoli */
-    }
-
-    .tooltip-box {
-        width: 85%; /* Mantiene il tooltip ben proporzionato sui display stretti */
-        left: 50%;
-    }
-}
 
 /* Freccia verso il basso sotto il tooltip */
 .tooltip-box::after {
@@ -362,6 +339,30 @@ body {
 .tooltip-container:hover .tooltip-box {
     visibility: visible;
     opacity: 1;
+}
+
+/* Ottimizzazione specifica per mobile - incluso la freccia verso il basso per il suggerimento di scorrimento */
+@media (max-width: 768px) {
+    .tooltip-container {
+        cursor: pointer; /* Su mobile mostra che l'elemento è toccabile */
+    }
+
+    .top-section {
+        padding-bottom: 150px; /* Riduce il padding per schermi più piccoli e non sovrappore la freccia di scorrimento */
+    }
+    
+    .scroll-down {
+        bottom: 20px; /* Sposta la freccia di scorrimento più in alto per evitare sovrapposizioni con il tooltip */
+    }
+
+    .scroll-text {
+        font-size: 0.75rem; /* Riduce la dimensione del testo per schermi più piccoli */
+    }
+
+    .tooltip-box {
+        width: 85%; /* Mantiene il tooltip ben proporzionato sui display stretti */
+        left: 50%;
+    }
 }
 
 /* immagini  */
