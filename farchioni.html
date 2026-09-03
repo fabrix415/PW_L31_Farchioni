@@ -7,7 +7,9 @@
     <title>Farchioni, sostenibilità Italiana. Report e overview</title>
     <!-- Colleghiamo il file CSS per lo stile della pagina -->
     <link rel="stylesheet" href="style.css"> 
-</head>
+    <!-- implementazione di swiper avanzato per ottimizzazione mobile -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    </head>
 <body>
     <!-- Intestazione fissa della pagina-->
     
@@ -41,7 +43,7 @@
         <h1>Sostenibilità Italiana dal 1780 - Report di Sostenibilità 2024</h1>
         <p>L'impegno sostenibile della famiglia Farchioni per la tutela del territorio e dell'ambiente.</p>
         <!-- Call to action per il salto diretto alla sezione download -->
-        <a href="#download" class="cta-button">Vai al Download Diretto del Report 2024</a>
+        <a href="#download" class="cta-button">Vai al Download Diretto dei Report</a>
 
         <!-- indicatore di scorrimento-->
         <a href="#kpi" class="scroll-indicator" aria-label="Scorri verso il basso">
@@ -98,19 +100,18 @@
 <!-- Sezione Grafici e Immagini Interattive -->
 <section id="filiera" class="content-section alt-bg">
     <h2>Analisi della Filiera e Impatto Ambientale</h2>
-    <p>Passa con il cursore sulle immagini per ingrandire i dettagli dei processi produttivi e dei consumi.</p>
-
+    
     <div class="gallery-grid">
         <!-- Scheda Immagine 1 -->
         <div class="image-card">
             <div class="img-container">
                 <img src="assets/images/filiera.jpg" alt="Filiera Agricola Farchioni">
                 <div class="overlay">
-                    <span>14.900 Tonnellate di Olio Prodotte</span>
+                    <span>14.900 Tonnellate di Olio Prodotte nel 2024</span>
                 </div>
             </div>
             <h3>Tracciabilità e Territorio</h3>
-            <p>Gestione sostenibile delle colture e salvaguardia della biodiversità nelle tenute umbre.</p>
+            <p>Gestione sostenibile delle colture e salvaguardia della biodiversità nelle tenute.</p>
         </div>
 
         <!-- Scheda Immagine 2 -->
@@ -118,22 +119,136 @@
             <div class="img-container">
                 <img src="assets/images/energia.jpg" alt="Efficienza Energetica">
                 <div class="overlay">
-                    <span>-9% Intensità Energetica per Ricavi</span>
-                </div>
+                    <span>-9% Intensità Energetica per Ricavi rispetto al 2023 - 35,5 MWh/mln €</span>
+                </div> 
             </div>
             <h3>Efficienza ed Energia</h3>
-            <p>Riduzione del consumo idrico nei campi e transizione verso fonti rinnovabili nei 6 impianti.</p>
+            <p>Riduzione del consumo idrico nei campi e transizione verso fonti rinnovabili nei 6 impianti. Nel 2024 
+                è in corso di installazione un nuovo impianto fotovoltaico pari a 248 Kw/h.</p>
         </div>
     </div>
 </section>
-<section id="energia" class="content-section alt-bg">
-    <h2>Efficienza Energetica ed Ecologica</h2>
-    <p>Dati sul risparmio idrico nei campi e impiego di fonti energetiche rinnovabili nei processi produttivi.</p>
+
+<section id="successi" class="content-section alt-bg">
+    <h2>Successi Farchioni</h2>
+        <img src="assets/images/successi_farchioni.jpg" alt="Successi e Statistiche Farchioni">  
 </section>
 
-<section id="successi" class="content-section">
-    <h2>Successi Aziendali</h2>
-    <p>Storia dell'azienda, evoluzione del brand, obiettivi futuri e riconoscimenti ottenuti.</p>
+<section id="storia" class="content-section">
+    <h2>Storia Aziendale in breve</h2>
+    <!-- <p>Storia dell'azienda, evoluzione del brand e obiettivi futuri.</p> -->
+    <!-- implementazione di swiper avanzato per ottimizzazione mobile -->
+    <div class="swiper timeline-swiper">
+        <div class="swiper-wrapper">
+            
+            <!-- Swiper 1 -->
+            <div class="swiper-slide">
+                <img src="assets/images/swiper_1.jpg" alt="Anno 1780">
+                <div class="slide-caption">
+                    <h3>1780 - Le Origini</h3>
+                    <p>La storia di Farchioni ha inizio con Luigi Farchioni, che avvia la 
+                        sua attività a Magliano di Spoleto, nelle campagne umbre, con un 
+                        piccolo molino a pietra e acqua, producendo olio e farina. </p>
+                </div>
+            </div>
+
+            <!-- Swiper 2 -->
+            <div class="swiper-slide">
+                <img src="assets/images/swiper_2.jpg" alt="Anno 1950">
+                <div class="slide-caption">
+                    <h3>1950 - Crescita e Innovazione</h3>
+                    <p>Dopo la Seconda guerra mondiale, 
+                        i commerci con Roma vengono 
+                        incrementati; grazie ai nuovi 
+                        camion Fiat  venivano trasportati 
+                        rapidamente olio e vino in 
+                        damigiane da 50 litri e farine in 
+                        sacchi di juta da 100 kg. L’impianto 
+                        di produzione viene ancora 
+                        rinnovato con la costruzione di un 
+                        molino elettrico laminatoio e di 
+                        un avanzato frantoio Rapanelli a 
+                        presse da 400 atmosfere.</p>
+                </div>
+            </div>
+
+            <!-- Swiper 3 -->
+            <div class="swiper-slide">
+                <img src="assets/images/swiper_3.jpg" alt="Anno 1954">
+                <div class="slide-caption">
+                    <h3>1954 - Nascita dei nuovi Leader</h3>
+                    <p>Nasce Pompeo Farchioni Jr 
+                        seguito nel 1961 dal cugino 
+                        Roberto. Pompeo Farchioni ricopre il ruolo di presidente, 
+                        mentre Roberto è amministratore delegato. I due cugini rappresentano la continuità 
+                        imprenditoriale ispirata dai padri Domenico e Lanfranco, portando avanti un'azienda con 
+                        radici storiche profonde in Umbria.</p>
+                </div>
+            </div>
+            <!-- Swiper 4 -->
+            <div class="swiper-slide">
+                <img src="assets/images/swiper_4.jpg" alt="Anno 1983">
+                <div class="slide-caption">
+                    <h3>1983 - Innovazione e Crescita</h3>
+                    <p>Forti di un’esperienza di due 
+                        secoli e dall’importante cifra 
+                        creativa di Tosca, nasce il 
+                        Casolare con la sua inconfondibile 
+                        immagine, il primo olio non filtrato 
+                        al mondo ad essere venduto nei 
+                        supermercati.</p>
+                </div>
+            </div>
+            <!-- Swiper 5 -->
+            <div class="swiper-slide">
+                <img src="assets/images/swiper_5.jpg" alt="Anno 2004">
+                <div class="slide-caption">
+                    <h3>2004 - Espansione e Diversificazione</h3>
+                    <p>Con l'arrivo del nuovo millennio, l'azienda intraprende una strategia di espansione e 
+                        diversificazione, introducendo nuovi prodotti e migliorando i processi di produzione.
+                        Viene inaugurato un nuovo stabilimento di produzione dell'olio, 
+                        tutt'ora il più efficiente e tecnologico tra quelli esistenti.</p>
+                </div>
+            </div>
+            <!-- Swiper 6  -->
+            <div class="swiper-slide">
+                <img src="assets/images/swiper_6.jpg" alt="Anno 2010">
+                <div class="slide-caption">
+                    <h3>2010 - Innovazione e Sostenibilità</h3>
+                    <p>Viene creato il birrificio Mastri Birrai Umbri, 
+                        mettendo a frutto gli oltre mille ettari di campi ad orzo della famiglia. 
+                        Successivamente nel 2017 l'impianto di malteria e nuovo birrificio.</p>
+                </div>
+            </div>
+            <!-- Swiper 7 -->
+            <div class="swiper-slide">
+                <img src="assets/images/swiper_7.jpg" alt="Anno 2023 e 2024">
+                <div class="slide-caption">
+                    <h3>2023 e 2024 - Modello organizzativo e digitalizzazione</h3>
+                    <p>Vengono rilasciati i nuovi report di sostenibilità ambientale e sociale.</p>
+                    <h3>Scarica il report per approfondire la storia aziendale!</h3>
+                    <p>Consulta e scarica i documenti ufficiali messi a disposizione dall'azienda.</p>
+                    <a href="#download" class="cta-button">Vai al Download Diretto dei Report</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/images/swiper_8.jpg" alt="Scarica il report per approfondire la storia aziendale!">
+                <div class="slide-caption">
+                    <h3>Scarica il report per approfondire la storia aziendale!</h3>
+                    <p>Consulta e scarica i documenti ufficiali messi a disposizione dall'azienda.</p>
+                    <a href="#download" class="cta-button">Vai al Download Diretto dei Report</a>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Paginazione a Timeline (gli anni) -->
+        <div class="swiper-pagination"></div>
+
+        <!-- Frecce di Navigazione -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
 </section>
 <!-- Sezione Tabella Dati -->
 <section id="tabella-dati" class="content-section">
@@ -217,6 +332,32 @@
     });
 }); 
 </script>
-       
+<!-- JScript per attivare swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>  
+<!-- inizializzazione swiper -->
+<script>
+    const yearsArray = ['1780', '1950', '1954', '1983', '2004', '2010', '2024', 'Oggi']; //array anni swiper
+
+    const timelineSwiper = new Swiper('.timeline-swiper', {
+        loop: false,
+        grabCursor: true, // Mostra cursore al passaggio del mouse
+        spaceBetween: 20,
+        
+        // Paginazione personalizzata con gli anni della timeline
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + yearsArray[index] + '</span>';
+            },
+        },
+        
+        // Frecce per desktop
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>     
 </body>
 </html>

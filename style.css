@@ -243,7 +243,8 @@ body {
     margin: 0 auto;    
     padding: 60px 20px;
     box-sizing: border-box;
-    clear: both;       
+    clear: both;  
+    text-align: center;     
 }
 
 /* KPI con flexbox */
@@ -254,7 +255,7 @@ body {
     margin-top: 30px !important;
     width: 100% !important;
     box-sizing: border-box !important;
-}
+    }
 /* Stile per le schede KPI */
 .kpi-card {
     background-color: #ffffff;
@@ -283,7 +284,7 @@ body {
 /* Cambio a tooltip-container al mouseover */
 .tooltip-container {
     position: relative;
-    cursor: default; /* scegliamo default per evitare che sembri cliccabile */
+    cursor: default; /* default per evitare che sembri cliccabile */
 }
 
 /*icona per mobile*/
@@ -342,14 +343,13 @@ body {
 }
 
 
-
 /* immagini  */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 30px;
-    text-align: left;
+    text-align: center;
 }
 .image-card {
     background-color: #ffffff;
@@ -397,6 +397,20 @@ body {
     color: #555;
 }
 
+/* contenitore */
+#successi {
+    text-align: center; /* Centra il testo e gli elementi inline/inline-block */
+    padding: 20px;       /* Opzionale: aggiunge un po' di spazio attorno */
+}
+
+/* Centraggio immagine successi */
+#successi img {
+    display: block;      
+    margin: 0 auto;      
+    max-width: 100%;     
+    height: auto;        
+}
+
 /* Tabella dati */
 .table-container {
     overflow-x: auto;
@@ -411,7 +425,7 @@ body {
 .data-table th,
 .data-table td {
     padding: 14px 18px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #e0e0e0;
 }
 .data-table th {
@@ -421,6 +435,92 @@ body {
 }
 .data-table tbody tr:hover {
     background-color: #f4f9f5;
+}
+
+/*  Swiper */
+.timeline-swiper {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 50px; /* Spazio per la paginazione in basso */
+    position: relative;
+}
+
+/* Gestione immagini */
+.timeline-swiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+/* Didascalie immagini */
+.slide-caption {
+    text-align: center;
+    margin-top: 35px;
+    padding: 0 10px;
+}
+
+.slide-caption h3 {
+    margin-bottom: 5px;
+    color: #2c5e3b;
+}
+
+/* swiper degli anni */
+.timeline-swiper .swiper-pagination {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    bottom: 0 !important;
+    justify-content: center; 
+    overflow-x: auto;            
+    white-space: nowrap;
+    padding: 10px 5px;
+    gap: 10px;
+    max-width: 100%;
+    align-items: center;
+    
+    /* Nasconde barra di scorrimento mantenendo lo scroll */
+    scrollbar-width: thin;
+}
+
+.timeline-swiper .swiper-pagination-bullet {
+    width: auto;
+    height: auto;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: #e0e0e0;
+    color: #333;
+    font-weight: bold;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.timeline-swiper .swiper-pagination-bullet-active {
+    background: #2c5e3b;
+    color: #ffffff;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Colore delle frecce di navigazione */
+.timeline-swiper .swiper-button-next,
+.timeline-swiper .swiper-button-prev {
+    color: #2c5e3b;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    margin-top: -30px;
 }
 
 /* Sezione download */
@@ -441,7 +541,7 @@ footer {
     color: #ffffff;
     font-size: 0.85rem;
 }
-/* Ottimizzazione specifica per mobile - incluso la freccia verso il basso per il suggerimento di scorrimento */
+/* Ottimizzazione specifica per mobile - incluso la freccia verso il basso per il suggerimento di scorrimento + hamburger */
 @media screen and (max-width: 768px) {
     /* Navbar e Hamburger */
     .hamburger {
@@ -485,7 +585,7 @@ footer {
         transform: translateY(-11px) rotate(-45deg);
     }
 
-    /* Hero section e prevenzione sovrapposizione freccia su Mobile */
+    /* Top section e prevenzione sovrapposizione freccia su Mobile */
     .top-section {
         min-height: 100vh;
         display: flex;
@@ -524,7 +624,7 @@ footer {
         font-size: 0.75rem;
     }
 
-    /* Tooltip Mobile */
+    /* Puntatore invece di cursore per evitare falsi click */
     .tooltip-container {
         cursor: pointer;
     }
