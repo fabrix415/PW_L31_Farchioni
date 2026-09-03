@@ -10,6 +10,25 @@
 </head>
 <body>
     <!-- Intestazione fissa della pagina-->
+    <!-- JScript per attivare il menu su schermi piccoli -->
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    // Toggle apertura menu al click sull'hamburger
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+
+    // Chiudi il menu quando si clicca su un link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+</script>
    <header class="navbar">
         <div class="nav-container">
             <!-- Logo aziendale per jump a top con testo alternativo per accessibilità -->
@@ -18,6 +37,20 @@
                     <img src="assets/images/logo_farchioni.svg" alt="Logo Farchioni"> 
                 </a>
             </div>
+            <!-- Pulsante Hamburger per Mobile -->
+            <button class="hamburger" id="hamburger" aria-label="Apri menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Menu Link con ID dedicato -->
+            <nav class="nav-links" id="nav-links">
+                <a href="#filiera">Filiera & Territorio</a>
+                <a href="#energia">Efficienza Energetica</a>
+                <a href="#successi">Successi Aziendali</a>
+                <a href="#download" class="btn-download">Scarica Report</a>
+            </nav>
             <nav class="nav-links">
                 <a href="#filiera">Filiera & Territorio</a>
                 <a href="#energia">Efficienza Energetica</a>
