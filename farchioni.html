@@ -38,10 +38,16 @@
     </header>
     <!-- Contenuto principale della pagina -->
     <section id="top" class="top-section">
-        <h1>Report di Sostenibilità 2024</h1>
+        <h1>Sostenibilità Italiana dal 1780 - Report di Sostenibilità 2024</h1>
         <p>L'impegno sostenibile della famiglia Farchioni per la tutela del territorio e dell'ambiente.</p>
         <!-- Call to action per il salto diretto alla sezione download -->
-        <a href="#download" class="cta-button">Vai al Download Diretto</a>
+        <a href="#download" class="cta-button">Vai al Download Diretto del Report 2024</a>
+
+        <!-- indicatore di scorrimento-->
+        <a href="#kpi" class="scroll-indicator" aria-label="Scorri verso il basso">
+            <span class="scroll-text">Scorri per scoprire di più</span>
+            <div class="arrow"></div>
+        </a>
     </section>
 
     <!-- Sezioni in scorrimento continuo -->
@@ -50,22 +56,42 @@
     <p>Principali indicatori ambientali, economici e produttivi estratti dal report aziendale.</p>
 
     <!-- KPI -->
-    <div class="kpi-grid">
-        <div class="kpi-card">
+    <div class="kpi-grid "> 
+        <!--KPI Ricavi netti-->
+        <div class="kpi-card tooltip-container"> <!-- Tooltip-container box per mantenere uniformità con gli altri kpi-card e ampliare i dettagli-->
             <span class="kpi-number">171,3 M€</span>
-            <p class="kpi-label">Ricavi Netti</p>
+            <p class="kpi-label"><b>Ricavi Netti</b></p> <!-- bold per enfasi -->
+            <div class="tooltip-box"> 
+                <p>Valore dei ricavi netti consolidati al 31 Dicembre 2024. 
+                    Consulta la sezione "risultati economici" a pagina 115 del report 2024 per maggior dettaglio</p>
         </div>
-        <div class="kpi-card">
+    </div>
+        <!--KPI Intensità Emissiva-->
+        <div class="kpi-card tooltip-container">
             <span class="kpi-number">-20%</span>
-            <p class="kpi-label">Intensità Emissiva (Scope 1+2)</p>
+            <p class="kpi-label"><b>Intensità Emissiva (Scope 1+2)</b></p>
+            <div class="tooltip-box"> 
+                <p>Calcolo riferito alle emissioni dirette e indirette per unità di prodotto. 
+                    Consulta la sezione "impatto ambientale" a pagina 10 del report 2024 per maggior dettaglio</p>
+            </div>
         </div>
-        <div class="kpi-card">
+        <!-- KPI Piante Coltivate -->
+        <div class="kpi-card tooltip-container">
             <span class="kpi-number">1.013.683</span>
-            <p class="kpi-label">Piante Coltivate (Olivi e Viti)</p>
+            <p class="kpi-label"><b>Piante Coltivate (Olivi e Viti)</b></p>
+            <div class="tooltip-box"> 
+                <p>Numero totale di piante coltivate nelle tenute. 
+                    Consulta la sezione "territorio e biodiversità" a pagina 91 del report 2024 per maggior dettaglio</p>
+            </div>
         </div>
-        <div class="kpi-card">
+        <!-- KPI Packaging da Materiali Riciclati -->
+        <div class="kpi-card tooltip-container">
             <span class="kpi-number">50%</span>
-            <p class="kpi-label">Packaging da Materiali Riciclati</p>
+            <p class="kpi-label"><b>Packaging da Materiali Riciclati</b></p>
+            <div class="tooltip-box">
+                <p>Percentuale di packaging realizzato con materiali riciclati. 
+                    Consulta la sezione "sostenibilità" a pagina 21 del report 2024 per maggior dettaglio</p>
+            </div>
         </div>
     </div>
 </section>
