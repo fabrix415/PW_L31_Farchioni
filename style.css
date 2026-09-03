@@ -322,6 +322,18 @@ body {
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
+/* Ottimizzazione specifica per mobile */
+@media (max-width: 768px) {
+    .tooltip-container {
+        cursor: pointer; /* Su mobile mostra che l'elemento è toccabile */
+    }
+    
+    .tooltip-box {
+        width: 85%; /* Mantiene il tooltip ben proporzionato sui display stretti */
+        left: 50%;
+    }
+}
+
 /* Freccia verso il basso sotto il tooltip */
 .tooltip-box::after {
     content: "";
