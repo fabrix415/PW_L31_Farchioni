@@ -341,29 +341,7 @@ body {
     opacity: 1;
 }
 
-/* Ottimizzazione specifica per mobile - incluso la freccia verso il basso per il suggerimento di scorrimento */
-@media (max-width: 768px) {
-    .tooltip-container {
-        cursor: pointer; /* Su mobile mostra che l'elemento è toccabile */
-    }
 
-    .top-section {
-        padding-bottom: 150px; /* Riduce il padding per schermi più piccoli e non sovrappore la freccia di scorrimento */
-    }
-    
-    .scroll-down {
-        bottom: 20px; /* Sposta la freccia di scorrimento più in alto per evitare sovrapposizioni con il tooltip */
-    }
-
-    .scroll-text {
-        font-size: 0.75rem; /* Riduce la dimensione del testo per schermi più piccoli */
-    }
-
-    .tooltip-box {
-        width: 85%; /* Mantiene il tooltip ben proporzionato sui display stretti */
-        left: 50%;
-    }
-}
 
 /* immagini  */
 .gallery-grid {
@@ -463,11 +441,11 @@ footer {
     color: #ffffff;
     font-size: 0.85rem;
 }
-
-/* MediaQuery per dispositivi mobili o screen ridotti minore di 768px */
+/* Ottimizzazione specifica per mobile - incluso la freccia verso il basso per il suggerimento di scorrimento */
 @media screen and (max-width: 768px) {
+    /* Navbar e Hamburger */
     .hamburger {
-        display: flex !important; /* per sovrapposizione */
+        display: flex !important;
     }
 
     .nav-links {
@@ -477,18 +455,18 @@ footer {
         width: 70%;
         height: 100vh;
         background-color: #68a87a;
-        display: flex !important; /* per sovrapposizione */
+        display: flex !important;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 25px;
         transition: right 0.4s ease;
         box-shadow: -5px 0 15px rgba(0,0,0,0.3);
-        z-index: 1001 /* per sovrapposizione */
+        z-index: 1001;
     }
 
     .nav-links.active {
-        right: 0 !important; /* per sovrapposizione */
+        right: 0 !important;
     }
 
     .nav-links a {
@@ -505,5 +483,54 @@ footer {
     }
     .hamburger.active span:nth-child(3) {
         transform: translateY(-11px) rotate(-45deg);
+    }
+
+    /* Hero section e prevenzione sovrapposizione freccia su Mobile */
+    .top-section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 90px 20px 30px 20px;
+        box-sizing: border-box;
+    }
+
+    .top-section h1 {
+        font-size: 1.8rem;
+        margin-top: auto;
+        margin-bottom: 10px;
+    }
+
+    .top-section p {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+
+    .cta-button {
+        margin-top: 10px;
+        margin-bottom: auto;
+    }
+
+    .scroll-down {
+        position: relative !important;
+        bottom: auto !important;
+        left: auto !important;
+        transform: none !important;
+        margin-top: 20px;
+    }
+
+    .scroll-text {
+        font-size: 0.75rem;
+    }
+
+    /* Tooltip Mobile */
+    .tooltip-container {
+        cursor: pointer;
+    }
+
+    .tooltip-box {
+        width: 85%;
+        left: 50%;
     }
 }
