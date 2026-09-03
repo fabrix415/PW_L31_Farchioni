@@ -472,12 +472,12 @@ body {
 .timeline-swiper .swiper-pagination {
     position: relative;
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px;
     bottom: 0 !important;
     justify-content: center; 
     overflow-x: auto;            
     white-space: nowrap;
-    padding: 10px 5px;
+    padding: 30px 5px;
     gap: 10px;
     max-width: 100%;
     align-items: center;
