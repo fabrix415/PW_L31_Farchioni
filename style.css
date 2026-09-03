@@ -280,11 +280,26 @@ body {
     color: #555;
 }
 
-
 /* Cambio a tooltip-container al mouseover */
 .tooltip-container {
     position: relative;
     cursor: default; /* scegliamo default per evitare che sembri cliccabile */
+}
+
+/*icona per mobile*/
+
+.info-icon {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #2e6f40;
+    margin-left: 4px;
+    opacity: 0.8;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.tooltip-container:hover .info-icon { 
+    opacity: 1;
+    transform: scale(1.2);
 }
 
 .tooltip-box {
