@@ -481,7 +481,7 @@ body {
     gap: 10px;
     max-width: 100%;
     align-items: center;
-    box-sizing: border-box;    
+    box-sizing: border-box; /* centraggio su mobile per bug fuori schermo */
     /* Nasconde barra di scorrimento mantenendo lo scroll */
     scrollbar-width: thin;
 }
