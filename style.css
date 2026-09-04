@@ -474,14 +474,14 @@ body {
     display: flex;
     margin-top: 10px;
     bottom: 0;
-    justify-content: center; 
+    justify-content: flex-start; 
     overflow-x: auto;            
     white-space: nowrap;
-    padding: 30px 5px;
+    padding: 15px 10px;
     gap: 10px;
     max-width: 100%;
     align-items: center;
-    
+    box-sizing: border-box;    
     /* Nasconde barra di scorrimento mantenendo lo scroll */
     scrollbar-width: thin;
 }
@@ -541,9 +541,9 @@ footer {
     color: #ffffff;
     font-size: 0.85rem;
 }
-/* Ottimizzazione specifica per mobile - incluso la freccia verso il basso per il suggerimento di scorrimento + hamburger */
+/* Ottimizzazione specifica per mobile + freccia verso il basso per il suggerimento di scorrimento + hamburger */
 @media screen and (max-width: 768px) {
-    /* Navbar e Hamburger */
+    /* Navbar fissa e hamburger */
     .hamburger {
         display: flex ;
     }
